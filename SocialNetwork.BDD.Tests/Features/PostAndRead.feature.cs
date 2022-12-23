@@ -28,7 +28,7 @@ namespace SocialNetwork.BDD.Tests.Features
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "Posting.feature"
+#line 1 "PostAndRead.feature"
 #line hidden
         
         public PostingFeature(PostingFeature.FixtureData fixtureData, SocialNetwork_BDD_Tests_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
