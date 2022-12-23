@@ -5,7 +5,8 @@ Feature: Posting
 Scenario: Post message
 	Given In our Social Network
 	When The user writes a <PostMessage>
-	And The user writes the <UserName> 
+	And The user writes the <UserName>
+	And A second has passed since the post
 	Then The last <Post> is displayed
 	
 Examples: 

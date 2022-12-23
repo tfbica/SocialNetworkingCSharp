@@ -129,6 +129,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And(string.Format("The user writes the {0}", userName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 9
+ testRunner.And("A second has passed since the post", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 10
  testRunner.Then(string.Format("The last {0} is displayed", post), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

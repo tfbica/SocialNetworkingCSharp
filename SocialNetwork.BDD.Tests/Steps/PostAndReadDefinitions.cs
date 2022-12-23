@@ -7,12 +7,19 @@ namespace SocialNetwork.BDD.Tests;
 public class PostAndReadDefinitions
 {
     private SocialNetworkClient _socialNetworkClient;
+    private readonly Mock<IClockService> _clockServiceMock = new();
     private readonly Mock<IPrinter> _printerMock = new();
+
+    private Parser _parser = new Parser();
+    private PostRepository _postRepository = new PostRepository();
+    
+    
+    
 
     [Given(@"In our Social Network")]
     public void GivenInOurSocialNetwork()
     {
-        _socialNetworkClient = new SocialNetworkClient(_printerMock.Object);
+        _socialNetworkClient = new SocialNetworkClient(_printerMock.Object, _postRepository, _parser, _clockServiceMock.Object);
     }
 
     [When(@"The user writes a (.*)")]
