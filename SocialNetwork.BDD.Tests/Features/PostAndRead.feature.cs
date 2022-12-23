@@ -84,8 +84,8 @@ namespace SocialNetwork.BDD.Tests.Features
         [Xunit.TraitAttribute("FeatureTitle", "Posting")]
         [Xunit.TraitAttribute("Description", "Post message")]
         [Xunit.TraitAttribute("Category", "mytag")]
-        [Xunit.InlineDataAttribute("Alice -> I love Python!", "Alice", "I love Python! (1 second ago)", new string[0])]
-        public virtual void PostMessage(string postMessage, string userName, string post, string[] exampleTags)
+        [Xunit.InlineDataAttribute("Alice -> I love Python!", "1", "Alice", "I love Python! (1 second ago)", new string[0])]
+        public virtual void PostMessage(string postMessage, string seconds, string userName, string post, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "mytag"};
@@ -96,6 +96,7 @@ namespace SocialNetwork.BDD.Tests.Features
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("PostMessage", postMessage);
+            argumentsOfScenario.Add("Seconds", seconds);
             argumentsOfScenario.Add("UserName", userName);
             argumentsOfScenario.Add("Post", post);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Post message", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
@@ -126,10 +127,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When(string.Format("The user writes a {0}", postMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
- testRunner.And(string.Format("The user writes the {0}", userName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("{0} has passed since the post", seconds), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 9
- testRunner.And("A second has passed since the post", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("The user writes the {0}", userName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
  testRunner.Then(string.Format("The last {0} is displayed", post), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

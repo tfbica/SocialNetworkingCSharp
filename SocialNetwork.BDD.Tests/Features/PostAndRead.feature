@@ -5,10 +5,10 @@ Feature: Posting
 Scenario: Post message
 	Given In our Social Network
 	When The user writes a <PostMessage>
+	And <Seconds> has passed since the post
 	And The user writes the <UserName>
-	And A second has passed since the post
 	Then The last <Post> is displayed
 	
 Examples: 
-	| PostMessage             | UserName | Post           				 |
-	| Alice -> I love Python! | Alice    | I love Python! (1 second ago) |
+	| PostMessage             | Seconds | UserName | Post                          |
+	| Alice -> I love Python! | 1       | Alice    | I love Python! (1 second ago) |
