@@ -26,4 +26,8 @@
       <Folder Include="Drivers" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\SocialNetwork.Domain\SocialNetwork.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

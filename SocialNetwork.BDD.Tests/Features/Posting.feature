@@ -3,7 +3,11 @@ Feature: Posting
 
 @mytag
 Scenario: Post message
-	Given The user is <Alice>
-	And Uses the -> command
-	When It types a <Hello bob!> message
-	Then A post is added to <Alice> timeline
+	Given In our Social Network
+	When The user writes a <PostMessage>
+	And The user writes the <UserName> 
+	Then The last <Post> is displayed
+	
+Examples: 
+	| PostMessage             | UserName | Post           				 |
+	| Alice -> I love Python! | Alice    | I love Python! (1 second ago) |

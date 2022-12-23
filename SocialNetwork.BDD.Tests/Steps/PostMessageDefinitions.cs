@@ -1,29 +1,35 @@
+using SocialNetwork.Domain;
+
 namespace SocialNetwork.BDD.Tests;
 
 [Binding]
 public class PostMessageDefinitions
 {
-    [Given(@"The user is (.*)")]
-    public void GivenTheUserIs(string name)
-    {
-        ScenarioContext.StepIsPending();
-    }
+    private SocialNetworkClient _socialNetworkClient;
+    
 
-    [Given(@"Uses the -> command")]
-    public void GivenUsesTheCommand()
+    [Given(@"In our Social Network")]
+    public void GivenInOurSocialNetwork()
     {
-        ScenarioContext.StepIsPending();
+        _socialNetworkClient = new SocialNetworkClient();
     }
-
-    [When(@"It types a (.*) message")]
-    public void WhenItTypesAMessage(string message)
+    
+    [When(@"The user writes a (.*)")]
+    public void WhenTheUserWritesA(string postMessage)
     {
-        ScenarioContext.StepIsPending();
+        _socialNetworkClient.Accept(postMessage);
     }
-
-    [Then(@"A post is added to (.*) timeline")]
-    public void ThenAPostIsAddedToTimeline(string name)
+    
+    [When(@"The user writes the (.*)")]
+    public void WhenTheUserWritesThe(string userName)
     {
-        ScenarioContext.StepIsPending();
+        _socialNetworkClient.Accept(userName);
+    }
+    
+
+    [Then(@"The last (.*) is displayed")]
+    public void ThenTheLastIsDisplayed(string post)
+    {
+          
     }
 }

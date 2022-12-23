@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.BDD.Tests", "SocialNetwork.BDD.Tests\SocialNetwork.BDD.Tests.csproj", "{3D5922E8-F7DE-4057-93F3-149DA9D9BB6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetwork.Domain", "SocialNetwork.Domain\SocialNetwork.Domain.csproj", "{47054330-DCC2-4934-A219-3B5C66E6FC47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{3D5922E8-F7DE-4057-93F3-149DA9D9BB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D5922E8-F7DE-4057-93F3-149DA9D9BB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D5922E8-F7DE-4057-93F3-149DA9D9BB6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47054330-DCC2-4934-A219-3B5C66E6FC47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47054330-DCC2-4934-A219-3B5C66E6FC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47054330-DCC2-4934-A219-3B5C66E6FC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47054330-DCC2-4934-A219-3B5C66E6FC47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
